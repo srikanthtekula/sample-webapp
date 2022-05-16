@@ -11,7 +11,7 @@ node{
 /*
  stage('tag Image'){
       sh 'docker tag apache-tomcat-8.1.6:v1 srikanthtekula/apache-tomcat-8.1.6:v1'
-	  echo "docker tag successful "
+	  echo "docker tag successful  "
   } 
 */
 
