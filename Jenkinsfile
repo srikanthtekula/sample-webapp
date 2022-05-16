@@ -6,8 +6,8 @@ node{
   stage('Build Image'){
       sh 'docker build -t srikanthtekula/apache-tomcat-8.1.5:v1 .' 
 	  echo "copying the web application war file to docker container"
-	 # 'docker run -d -p 9090:9090 --name=tomcat-8.1.5-container apache-tomcat-8.1.5:v1'
-	 # 'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcat-8-container:/usr/local/tomcat/webapps'   
+	 // 'docker run -d -p 9090:9090 --name=tomcat-8.1.5-container apache-tomcat-8.1.5:v1'
+	// 'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcat-8-container:/usr/local/tomcat/webapps'   
 	  echo " docker web application build of tomcat-8 successful "
   }
 
