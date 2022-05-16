@@ -1,7 +1,7 @@
 version: '3.6'
 services:
  nginxsserver:
-   image: srikanthtekula/apache-tomcat-8.2.0:v1
+   image: srikanthtekula/apache-tomcat-8.2.5:v1
    container_name: tomcatServer
    ports:
      -  9090:9090	
