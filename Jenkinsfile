@@ -4,8 +4,8 @@ node{
 	  echo " scm check out successful "
   }
   stage('Build Image'){
-      sh 'docker build -t srikanthtekula/apache-tomcat-8.1.6:v1 .' 
-      echo " docker web application image build of tomcat-8.1.6 successful "
+      sh 'docker build -t srikanthtekula/apache-tomcat-8.1.7:v1 .' 
+      echo " docker web application image build of tomcat-8.1.7 successful "
   }
 
 /*
@@ -22,8 +22,8 @@ withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordV
 }
 }
  
- stage('Push the image to locally created registry'){
-	      sh 'docker push srikanthtekula/apache-tomcat-8.1.6:v1'
+ stage('Push the image to docker hub registry'){
+	      sh 'docker push srikanthtekula/apache-tomcat-8.1.7:v1'
 	  }  
  
 stage('creating container for apache-tomcat-8') { 
