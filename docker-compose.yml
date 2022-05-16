@@ -3,7 +3,7 @@ version: "3.6"
 services: 
   nginxsserver: 
     container_name: tomcatServer
-    image: "srikanthtekula/apache-tomcat-8.2.0:v1"
+    image: "srikanthtekula/apache-tomcat-8.3.0:v1"
     ports: 
       - "9090:9090"
     volumes: 
