@@ -2,7 +2,7 @@ version: '3.6'
 services:
  tomcatserver:
    image: srikanthtekula/apache-tomcat-8.3.2:v1
-   container_name: tomcatServer
+   container_name: tomcatServer1
    ports:
    -  9090:9090
    volumes:
