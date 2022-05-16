@@ -5,7 +5,7 @@ services:
    container_name: tomcatServer
    ports:
      -  9090:9090	
-	volumes: 
+   volumes: 
      -  tomcat-data:/usr/local/tomcat/webapps
      -  /var/run/docker.sock:/var/run/docker.sock	 
 volumes: 
