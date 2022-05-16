@@ -1,13 +1,12 @@
---- 
-version: "3.6"
-services: 
-  nginxsserver: 
-    container_name: tomcatServer
-    image: "srikanthtekula/apache-tomcat-8.3.0:v1"
-    ports: 
-      - "9090:9090"
-    volumes: 
-      - "tomcat-data:/usr/local/tomcat/webapps"
-      - "/var/run/docker.sock:/var/run/docker.sock"
-volumes: 
-  tomcat-data: ~
+version: '3.6'
+services:
+ nginxsserver:
+   image: srikanthtekula/apache-tomcat-8.2.5:v1
+   container_name: tomcatServer
+   ports:
+   -  9090:9090
+   volumes:
+   -  tomcat-data:/usr/local/tomcat/webapps
+   -  /var/run/docker.sock:/var/run/docker.sock
+volumes:
+  tomcat-data:
