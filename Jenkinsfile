@@ -4,8 +4,8 @@ node{
 	  echo " scm check out successful "
   }
   stage('Build Image'){
-      sh 'docker build -t srikanthtekula/apache-tomcat-8.3.2:v1 .' 
-      echo " docker web application image build of tomcat-8.3.2 successful "
+      sh 'docker build -t srikanthtekula/apache-tomcat-8.3.3:v1 .' 
+      echo " docker web application image build of tomcat-8.3.3 successful "
   }
 
 /*
@@ -14,7 +14,7 @@ node{
 	  echo "docker tag successful  "
   } 
 */
-/*
+
 stage('login to the dockerhub'){
 withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'pword', usernameVariable: 'uname')]) {
    sh "docker login -u srikanthtekula -p $pword"
@@ -23,9 +23,9 @@ withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordV
 }
  
  stage('Push the image to docker hub registry'){
-	      sh 'docker push srikanthtekula/apache-tomcat-8.3.2:v1'
+	      sh 'docker push srikanthtekula/apache-tomcat-8.3.3:v1'
 	  }  
- */
+
 	
 stage('creating container for apache-tomcat-8') { 
 	      sh 'docker-compose up -d'
