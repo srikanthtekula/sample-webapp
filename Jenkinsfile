@@ -33,7 +33,7 @@ stage('creating container for apache-tomcat-8') {
 
 stage('copying the sample webapplication war') {
 // 'docker cp ./target/sample-webapp.war tomcatServer:/usr/local/tomcat/webapps'
-sh 'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcatServer1:/usr/local/tomcat/webapps'
+sh 'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcatServer:/usr/local/tomcat/webapps'
 echo "sample web application deployed successfully "
 }
 		
