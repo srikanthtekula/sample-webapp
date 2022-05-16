@@ -14,7 +14,7 @@ node{
 	  echo "docker tag successful  "
   } 
 */
-
+/*
 stage('login to the dockerhub'){
 withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordVariable: 'pword', usernameVariable: 'uname')]) {
    sh "docker login -u srikanthtekula -p $pword"
@@ -25,14 +25,15 @@ withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordV
  stage('Push the image to docker hub registry'){
 	      sh 'docker push srikanthtekula/apache-tomcat-8.3.2:v1'
 	  }  
- 
+ */
+	
 stage('creating container for apache-tomcat-8') { 
 	      sh 'docker-compose up -d'
 	  }    
 
 stage('copying the sample webapplication war') {
 // 'docker cp ./target/sample-webapp.war tomcatServer:/usr/local/tomcat/webapps'
-'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcatServer:/usr/local/tomcat/webapps'
+sh 'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcatServer:/usr/local/tomcat/webapps'
 echo "sample web application deployed successfully "
 }
 		
