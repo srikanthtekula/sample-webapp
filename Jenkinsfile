@@ -4,8 +4,8 @@ node{
 	  echo " scm check out successful "
   }
   stage('Build Image'){
-      sh 'docker build -t srikanthtekula/apache-tomcat-8.2.0:v1 .' 
-      echo " docker web application image build of tomcat-8.2.0 successful "
+      sh 'docker build -t srikanthtekula/apache-tomcat-8.2.1:v1 .' 
+      echo " docker web application image build of tomcat-8.2.1 successful "
   }
 
 /*
@@ -23,7 +23,7 @@ withCredentials([usernamePassword(credentialsId: 'docker-credentials', passwordV
 }
  
  stage('Push the image to docker hub registry'){
-	      sh 'docker push srikanthtekula/apache-tomcat-8.2.0:v1'
+	      sh 'docker push srikanthtekula/apache-tomcat-8.2.1:v1'
 	  }  
  
 stage('creating container for apache-tomcat-8') { 
@@ -31,7 +31,8 @@ stage('creating container for apache-tomcat-8') {
 	  }    
 
 stage('copying the sample webapplication war') {
-'docker cp ./target/sample-webapp.war tomcatServer:/usr/local/tomcat/webapps'
+// 'docker cp ./target/sample-webapp.war tomcatServer:/usr/local/tomcat/webapps'
+'docker cp /home/srikanth/MyEcosmob-Data/POC-Assigment/sample.war tomcatServer:/usr/local/tomcat/webapps'
 echo "sample web application deployed successfully "
 }
 	
