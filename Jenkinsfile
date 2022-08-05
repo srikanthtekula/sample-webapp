@@ -5,8 +5,8 @@ node{
   }
 	
   stage('Build Image'){
-      sh 'docker build -t srikanthtekula/apache-tomcat-8.4.2:v1 .' 
-      echo " docker web application image build of tomcat-8.4.2 successful "
+      sh 'docker build -t srikanthtekula/apache-tomcat-8.4.3:v1 .' 
+      echo " docker web application image build of tomcat-8.4.3 successful "
   }
 
 /*
@@ -24,7 +24,7 @@ sh "docker login -u srikanthtekula -p $pword"
 }
  
  stage('Push the image to docker hub registry'){
-	      sh 'docker push srikanthtekula/apache-tomcat-8.4.2:v1'
+	      sh 'docker push srikanthtekula/apache-tomcat-8.4.3:v1'
 	  }  
 
 	
